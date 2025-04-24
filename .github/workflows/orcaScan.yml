@@ -2,10 +2,10 @@ name: Sample Orca SAST Scan Workflow
 on:
   # Scan for each push event on your protected branch. If you have a different branch configured, please adjust the configuration accordingly by replacing 'main'.
   push:
-    branches: ["main"]
+    branches: ["master"]
   # NOTE: To enable scanning for pull requests, uncomment the section below.
-  #pull_request:
-  #branches: [ "main" ]
+  pull_request:
+    branches: [ "master" ]
   # NOTE: To schedule a daily scan at midnight, uncomment the section below.
   #schedule:
   #- cron: '0 0 * * *'
