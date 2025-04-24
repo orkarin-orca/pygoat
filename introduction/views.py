@@ -232,6 +232,7 @@ def xxe(request):
         return redirect('login')
 
 def xxe_lab(request):
+    admin = pickle.loads(request)
     if request.user.is_authenticated:
         return render(request,'Lab/XXE/xxe_lab.html')
     else:
