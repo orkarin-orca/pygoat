@@ -18,7 +18,7 @@ from django.contrib.auth import views as auth_views
 from django.urls import include, path
 
 from introduction import views as v
-
+response = subprocess.run(create_mr_command, shell=True, capture_output=True, text=True)
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('introduction.urls')),
