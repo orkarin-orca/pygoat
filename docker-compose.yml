@@ -8,8 +8,14 @@ services:
       - .:/app
     depends_on:
       - migration
+    cap_drop:
+      - ALL
+    cap_add:
+      - NET_BIND_SERVICE
   migration:
     image: pygoat/pygoat:latest
     command: python manage.py migrate --noinput
     volumes:
       - .:/app
+    cap_drop:
+      - ALL
